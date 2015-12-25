@@ -206,3 +206,66 @@ html,body{
     -webkit-transform: rotate(360deg);
     -webkit-transition: 1s;
 }
+
+.direction{
+    position: fixed;
+    bottom: 2%;
+    z-index: 200;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+}
+.direction span{
+    display: block;
+    width: 50%;
+    height: 50%;
+    border-left: 5px solid #fff;
+    border-top: 5px solid #fff;
+    transform: rotate(45deg) translate(13px,0);
+
+}
+
+
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
