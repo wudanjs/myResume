@@ -222,6 +222,7 @@ html,body{
     height: 50%;
     border-left: 5px solid #fff;
     border-top: 5px solid #fff;
+    -webkit-transform: rotate(45deg) translate(13px,0);
     transform: rotate(45deg) translate(13px,0);
 
 }
