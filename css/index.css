@@ -10,7 +10,7 @@ html,body{
     height: 100%;
     overflow: hidden;
 }
-#main{
+#content{
     width: 640px;
     height: 960px;
     position: absolute;
@@ -21,10 +21,10 @@ html,body{
 }
 .slide li{
     position: absolute;
-    width: 100%;
-    height: 100%;
     top:0;
     left:0;
+    width: 100%;
+    height: 100%;
 }
 .slide li:nth-child(1){
     background: url(../images/b.png) no-repeat;
@@ -41,7 +41,6 @@ html,body{
 }
 .slide li:nth-child(5){
     background: url(../images/a.png) no-repeat;
-    background-size: 100% 100%;
 }
 .zIndex{
     z-index: 111;
@@ -74,14 +73,14 @@ html,body{
 }
 .a2 p{
     position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -45px;
+    margin-left: -45px;
     width: 100px;
     height: 90px;
     color:#fff;
-    left:50%;
-    top:50%;
     font-size:20px;
-    margin-top: -45px;
-    margin-left: -45px;
     -webkit-transform: rotate(0deg);
 }
 .a2 p:nth-child(1){
@@ -107,9 +106,9 @@ html,body{
     top: 60%;
 }
 #a2 p:nth-child(5){
-     left: 80%;
-     top: 60%;
- }
+    left: 80%;
+    top: 60%;
+}
 #a2 p:nth-child(6){
     left: 50%;
     top: 70%;
@@ -169,7 +168,7 @@ html,body{
     top: 18%;
 }
 .a4 p:nth-child(3){
-    left: 78%;
+    left: 75%;
     top: 46%;
 }
 .a4 p:nth-child(4){
@@ -182,26 +181,26 @@ html,body{
 }
 .a4 p:nth-child(6){
     left: 55%;
-    top: 75%;
+    top: 73%;
 }
 
 #a4 p{
-    width: 120px;
-    height: 172px;
+    width: 86px;
+    height: 156px;
     -webkit-transition: 1s;
 }
-#a4 p:nth-child(3){
-    width: 80px;
+#a4 p:nth-child(3),#a4 p:nth-child(6){
+    width: 103px;
     height: 200px;
 }
 .a5 p{
+    position: absolute;
+    left:272px;
+    top:116px;
     color: #fff;
     font-size: 92px;
     text-shadow: 3px 2px 0 pink;
     width: 95px;
-    position: absolute;
-    left:272px;
-    top:116px;
 }
 #a5 p {
     -webkit-transform: rotate(360deg);

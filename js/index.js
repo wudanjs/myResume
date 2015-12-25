@@ -1,10 +1,18 @@
-var main = document.querySelector('#main');
+var content = document.querySelector('#content');
 var oLis = document.querySelectorAll(".slide>li");
 var winW = window.innerWidth;
 var winH = window.innerHeight;
 var desW = 640;
 var desH = 960;
-main.style.webkitTransform = "scale(" + winH / desH + ")";
+if(desW/desH<winW/winH){
+    content.style.webkitTransform = 'scale('+winW/desW+')';
+}else{
+    content.style.webkitTransform = 'scale('+winH/desH+')';//
+}
+
+var audio=document.getElementById("audio");
+audio.play();
+
 [].forEach.call(oLis, function () {
     arguments[0].index = arguments[1];
     arguments[0].addEventListener('touchstart', start, false);
@@ -17,9 +25,9 @@ function start(e) {
 function move(e) {
     e.preventDefault();
     /*阻止默认行为*/
-    var touchMove = e.changedTouches[0].pageY;
-    var changePos = touchMove - this.startY;
+    var changePos = e.changedTouches[0].pageY - this.startY;
     var cur = this.index;
+    var pos=0;
     var step = 1/2;
     var scalePos =(Math.abs(changePos)/winH)*step;
     [].forEach.call(oLis,function(){
@@ -30,11 +38,11 @@ function move(e) {
         arguments[0].firstElementChild.id="";
     });
     if (changePos > 0) {/*↓*/
-        var pos = -winH+changePos;
+        pos = -winH+changePos;
         this.preSIndex = cur == 0 ? oLis.length - 1 : cur - 1;
 
     } else if (changePos < 0) {/*↑*/
-        var pos = winH+changePos;
+        pos = winH+changePos;
         this.preSIndex = cur == oLis.length - 1 ? 0 : cur + 1;
 
     }
