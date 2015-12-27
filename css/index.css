@@ -89,7 +89,7 @@ html,body{
     -webkit-transform: rotate(0deg);
 }
 .a2 p:nth-child(1){
-    background: url(../images/photp.jpg) no-repeat;
+    background: url(../images/photo.jpg) no-repeat;
     background-size: cover;
     height: 120px;
 }
